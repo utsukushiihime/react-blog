@@ -3,7 +3,7 @@ import React from "react";
 const HomePage = () => {
     return (
         <>
-            <div className='container mt-4'>
+            <div className="container mt-4">
                 <h1>Hello, welcome to my blog.</h1>
                 <p>
                     Veniam excepteur anim dolore consectetur. Anim enim aute non
