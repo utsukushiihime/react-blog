@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ArticlesList from "./pages/ArticlesList";
+import ArticlesListPage from "./pages/ArticlesListPage";
 import ArticlePage from "./pages/ArticlePage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,7 +16,7 @@ function App() {
             <main>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
-                <Route path="/articles-list" component={ArticlesList} />
+                <Route path="/articles-list" component={ArticlesListPage} />
                 <Route path="/article/:name" component={ArticlePage} />
             </main>
         </Router>
