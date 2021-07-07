@@ -16,7 +16,11 @@ const UpvotesSection = ({ articleName, upvotes, setArticleInfo }) => {
                 <button className="btn btn-info btn-sm" onClick={upvoteArticle}>
                     Add Upvote
                 </button>
-                <p>This post has been upvoted {upvotes} times.</p>
+                <p>
+                    This post has been upvoted{" "}
+                    <span class="badge bg-info text-dark">{upvotes}</span>{" "}
+                    times.
+                </p>
             </div>
         </>
     );

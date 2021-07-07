@@ -33,23 +33,29 @@ const ArticlePage = ({ match }) => {
     return (
         <>
             <div className="container mt-4">
-                <h1>{article.title}</h1>
-                <UpvotesSection
-                    articleName={name}
-                    upvotes={articleInfo.upvotes}
-                    setArticleInfo={setArticleInfo}
-                />
-                {article.content.map((paragraph, key) => (
-                    <p key={key}>{paragraph}</p>
-                ))}
+                <div className="row">
+                    <div className="col-9">
+                        <h1>{article.title}</h1>
+                        <UpvotesSection
+                            articleName={name}
+                            upvotes={articleInfo.upvotes}
+                            setArticleInfo={setArticleInfo}
+                        />
+                        {article.content.map((paragraph, key) => (
+                            <p key={key}>{paragraph}</p>
+                        ))}
 
-                <CommentsList comments={articleInfo.comments} />
-                <AddCommentForm
-                    articleName={name}
-                    setArticleInfo={setArticleInfo}
-                />
-                <h3>Other Articles</h3>
-                <ArticlesList articles={otherArticles} />
+                        <CommentsList comments={articleInfo.comments} />
+                        <AddCommentForm
+                            articleName={name}
+                            setArticleInfo={setArticleInfo}
+                        />
+                    </div>
+                    <div className="col">
+                        <h3>Other Articles</h3>
+                        <ArticlesList articles={otherArticles} />
+                    </div>
+                </div>
             </div>
         </>
     );
